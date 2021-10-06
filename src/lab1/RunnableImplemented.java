@@ -13,7 +13,7 @@ public class RunnableImplemented implements Runnable{
 		// TODO Auto-generated method stub
 		{
 			long start =System.currentTimeMillis(); //Returns the current time in milliseconds
-			for (int i = 0; i < 5; i++) 
+			for (int i = 0; i < 10; i++) 
 			{
 				System.out.println(i + " " + name);
 				try 

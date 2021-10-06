@@ -18,7 +18,7 @@ public class SimpleThread extends  Thread
 //	then that Runnable object's run method is called;otherwise, this method does nothing and returns. 
 	{
 		long start =System.currentTimeMillis(); //Returns the current time in milliseconds
-		for (int i = 0; i < 5; i++) 
+		for (int i = 0; i < 10; i++) 
 		{
 			System.out.println(i + " " + getName());
 			try 
