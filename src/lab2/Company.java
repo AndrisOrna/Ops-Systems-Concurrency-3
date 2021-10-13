@@ -11,7 +11,9 @@ public class Company implements Runnable{
 	public void run() 
 	{
 		for (int i=0; i<100; i++){
-			account.addAmount(1000);
+			account.addAmount(10);
+//			System.out.println("Company thinking \n");
+
 		}
 	}
 }

@@ -12,7 +12,8 @@ public class Bank implements Runnable{
 	public void run() {
 		for (int i=0; i<100; i++)
 		{
-			account.subtractAmount(1000);
+			account.subtractAmount(10);
+//			System.out.println("Bank slow thinking \n");
 		}
 	}
 }

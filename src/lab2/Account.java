@@ -8,7 +8,10 @@ public class Account {
     }
 
     public double getBalance() {
-        return balance;
+    	synchronized(this) {
+    		return balance;
+    	}
+        
     }
 
     public void setBalance(double balance) {
@@ -16,24 +19,31 @@ public class Account {
     }
 
     public void addAmount(double amount) {
-        //double tmp = balance;
+    	// add something to add the amount
+    	synchronized(this) {
+        double tmp = balance;
+        setBalance(tmp + amount); 
+        
         try {
             Thread.sleep(10);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        balance = tmp + amount;
 
-
+    	}
     }
-
     public void subtractAmount(double amount) {
-        //double tmp = balance;
+    	synchronized(this) {
+    	double tmp = balance;
+        setBalance(tmp - amount); 
+        
         try {
             Thread.sleep(10);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
-
+        balance = tmp - amount;
+    	}
     }
 }
