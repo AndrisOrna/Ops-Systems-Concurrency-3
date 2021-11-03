@@ -5,14 +5,6 @@ public class ATM_machine_simulator extends Thread {
         // Create an Account object and initialize its balance to 1000.
         Account account = new Account();
         account.setBalance(1000);
-//        account.addAmount(100);
-//        account.subtractAmount(500);
-//        account.addAmount(100);
-
-        
-//        account.subtractAmount(100.00);
-//        account.addAmount(0);
-
         // Create a Company object and Thread to run it.
         Runnable companyX = new Company(account);// created object for company and started thread
         Thread companyX1 = new Thread(companyX) ;
@@ -30,13 +22,7 @@ public class ATM_machine_simulator extends Thread {
 //        IncrementThread[] threads = new IncrementThread[5];
         companyX1.start();
         BankX1.start();
-        
-
 //        account.getBalance();
-        
-
-
-
 //Wait for the finalization of the two threads using the join() method and print in the console the final balance of the account.
 
         try {
